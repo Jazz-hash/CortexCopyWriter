@@ -35,13 +35,13 @@ export const Header = () => {
       { opacity: "0" },
     ];
 
-    var brainAnimation = headerBrain.current.animate(brainKeyframes, {
+    headerBrain.current.animate(brainKeyframes, {
       easing: "ease-in-out",
       direction: "alternate",
       duration: 3000,
       iterations: Infinity,
     });
-    var frontAnimation = headerFront.current.animate(frontKeyframes, {
+    headerFront.current.animate(frontKeyframes, {
       duration: 1200,
       iterations: Infinity,
     });
@@ -50,38 +50,41 @@ export const Header = () => {
   return (
     <>
       <Navigation />
-      <div class="main">
-        <div class="row row2 header">
-          <div class="row-inner">
-            <div id="anchor-top" class="header-container">
-              <div class="header-container-text">
-                <div class="header-container-description">
-                  <div class="header-container-title">
-                    {/* <div class="header-container-title-1">The</div>  */}
-                    <div class="header-container-title-2">CORTEX</div>
-                    <div class="header-container-title-3">COPYWRITER</div>
+      <div className="main">
+        <div className="row row2 header">
+          <div className="row-inner">
+            <div id="anchor-top" className="header-container">
+              <div className="header-container-text">
+                <div className="header-container-description">
+                  <div className="header-container-title">
+                    {/* <div className="header-container-title-1">The</div>  */}
+                    <div className="header-container-title-2">CORTEX</div>
+                    <div className="header-container-title-3">COPYWRITER</div>
                   </div>
-                  <div class="header-container-paragraph">
-                    <p class="intro-title">
+                  <div className="header-container-paragraph">
+                    <p className="intro-title">
                       Enhance your communications with psychology-based
                       copywriting and UX writing
                     </p>
                   </div>
-                  <div class="header-container-cta">Send a message</div>
+                  <div className="header-container-cta">Send a message</div>
                 </div>
               </div>
-              <div class="header-container-image">
+              <div className="header-container-image">
                 <img
                   src={Intro_Front_Layer}
                   ref={headerFront}
-                  class="header-front"
+                  className="header-front"
+                  alt="header-front"
                 />
-                <img src={Intro_Featured_Image_Empty} />
-                <img src={Intro_Brain} ref={headerBrain} class="header-brain" />
+                <img src={Intro_Featured_Image_Empty} alt="header" />
+                <img src={Intro_Brain} ref={headerBrain} 
+                className="header-brain"
+                alt="header-brain" />
               </div>
             </div>
           </div>
-          <div class="header-container-bg"></div>
+          <div className="header-container-bg"></div>
         </div>
       </div>
     </>
