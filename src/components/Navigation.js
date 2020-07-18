@@ -48,7 +48,9 @@ export const Navigation = () => {
     for (const key in rainbowKeyframes) {
       if (rainbowKeyframes.hasOwnProperty(key)) {
         const rainbowKeyframe = rainbowKeyframes[key];
+        // eslint-disable-next-line
         eval(`rainbowChar${key}`).current.animate(rainbowKeyframe, properties);
+        // eslint-disable-next-line
       }
     }
   });
